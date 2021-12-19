@@ -316,7 +316,7 @@ def for_crp_cors(big_table, well_edges):
 	b = b.sort_values(by=['ridge_coef'],ignore_index=True)
 	return b
 
-
+##Analytes that are not correlated but are regressors##
 def non_cr(all_rgr, cor_rgr):
 	merged = pd.merge(all_rgr, cor_rgr, how='inner', on=['analytes'])
 	result =all_rgr[~all_rgr.analytes.isin(merged.analytes)]
