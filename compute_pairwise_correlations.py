@@ -1,4 +1,4 @@
-#@Author: Arpita Joshi, acknowledging help from Andrew Magis, ISB
+#@Author: Arpita Joshi
 #Parameter 1: path to snapshot
 #Parameter 2 and 3: the two tables whose joint correlation is desired
 #Parameter 4: type of merge (inner, outer, right or left), correlations of variables from one table might already exist because of joint correlation with a different table. Would save compute time to not use outer (the union) each time.
