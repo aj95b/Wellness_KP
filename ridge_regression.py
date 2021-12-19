@@ -1,6 +1,7 @@
 #Computes regressors of analytes that have maximum significant correlations with other analytes
 #using ridge regression: primary reason- no. of variables >> observations
-
+#Parameter 1: Path to data snapshot
+#Parameter 2: Path to latest correlations
 import pandas as pd
 import numpy as np
 from math import log
