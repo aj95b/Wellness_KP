@@ -3,6 +3,27 @@ import scipy.stats
 import pandas as pd
 import sys
 
+#Note to self: the edge qualifiers from old version:
+'''
+update = pd.read_csv(old_graph, sep = '\t')
+if(update.loc[i,'qualifier_value']=='white'):
+	update.loc[i,'qualifiers'] = 'UMLS CUI:C0043157'
+if(update.loc[i,'qualifier_value']=='black'):
+	update.loc[i,'qualifiers'] = 'UMLS CUI:C0005680'
+if(update.loc[i,'qualifier_value']=='south_asian'):
+	update.loc[i,'qualifiers'] = 'UMLS CUI:C1519427'
+if(update.loc[i,'qualifier_value']=='east_asian'):
+	update.loc[i,'qualifiers'] = 'UMLS CUI:C5205795'
+if(update.loc[i,'qualifier_value']=='spanish'):
+	update.loc[i,'qualifiers'] = 'UMLS CUI:C0086409'
+if(update.loc[i,'qualifier_value']=='midd_eastern'):
+	update.loc[i,'qualifiers'] = 'UMLS CUI:C2698217'
+if(update.loc[i,'qualifier_value']=='other'):
+	update.loc[i,'qualifiers'] = 'UMLS CUI:C0425379'
+if(update.loc[i,'qualifier_value']=='between 35 and 55' or update.loc[i,'qualifier_value']=="less than 35" or update.loc[i,'qualifier_value']=="more than 55"):
+	update.loc[i,'qualifiers'] = 'UMLS CUI:C5418925'
+'''
+
 def make_edges():
 	current_kg = pd.read_csv('wellness_kg_edges_v1.5.tsv', sep='\t')
 	current_kg = current_kg.drop(['weighted_pvalue'],axis=1)
