@@ -3,6 +3,7 @@ import os
 import scipy.stats
 import pandas as pd
 import sys
+from sectionalize import sectionalize_prot
 
 def clean_chem(path):
 	chem = pd.read_csv(path+'chemistries.tsv', sep='\t', comment="#", dtype={'public_client_id':str})
